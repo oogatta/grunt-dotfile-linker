@@ -1,4 +1,4 @@
-dotfile-linker
+grunt-dotfile-linker
 ==============
 
-create symbolic links for my dotfiles.
+grunt task to create symbolic links for my dotfiles.
