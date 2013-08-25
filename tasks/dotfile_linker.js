@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             file.src.map(function(src){
                 return {
                     fullPath : src,
-                    linkname : '.' + path.basename(src, '.dot')
+                    linkname : ( fs.statSync(src).isFile() ) ? '.' + path.basename(src, '.dot') : path.basename(src)
                 };
             }).forEach(function(target){
                 var link     = path.join(file.dest, target.linkname);
